@@ -5,8 +5,13 @@ def index
   render json: users
 end 
 
+def show 
+  user = User.find(params[:id])
+  render json: user, except: [:created_at, :updated_at]
+end 
 
 def create
+  byebug
     @user = User.create(user_params)
   if @user.valid?
       render json: { user: UserSerializer.new(@user) }, status: :created
