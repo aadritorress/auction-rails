@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
 
 def logged_in?
+# byebug
 headers = request.headers["Authorization"]
 token = headers.split(" ")[1]
 user_id = JWT.decode(token, "Auction")[0]["user_id"]
