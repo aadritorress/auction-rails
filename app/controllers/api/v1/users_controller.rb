@@ -11,7 +11,7 @@ def show
 end 
 
 def create
-  byebug
+  # byebug
     @user = User.create(user_params)
   if @user.valid?
       render json: { user: UserSerializer.new(@user) }, status: :created
@@ -22,7 +22,7 @@ end
 
   private
   def user_params
-    params.require(:user).permit(:name, :email, :username, :password_digest)
+    params.require(:user).permit(:name, :email, :username, :password)
   end
 
 end 

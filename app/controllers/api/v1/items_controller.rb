@@ -10,12 +10,26 @@ def show
     item = Item.find(params[:id])
     render json: item, except: [:created_at, :updated_at]
 end
-    
+
+
+
 def create
-    item = Item.create(picture: params[:picture], name: params[:name], initial_price: params[:initial_price], condition: params[:condition], sold: params[:sold], city: params[:city], user_id: params[:user_id])
-    render json: item, except: [:created_at, :updated_at]
+  item = Item.create(picture: params[:picture], name: params[:name], initial_price: params[:initial_price], condition: params[:condition], sold: params[:sold], city: params[:city], user_id: params[:user_id], charity_id: params[:charity_id])
+  render json: item, except: [:created_at, :updated_at]
 end 
 
+def update 
+  item = Item.find(params[:id])
+  item.update(sold: params[:sold])
+  render json: item
+end
+
+
+def destroy
+item = Item.find(params[:id])
+item.destroy
+end 
+    
 
 
 end
