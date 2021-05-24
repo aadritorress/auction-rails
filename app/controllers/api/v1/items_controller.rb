@@ -14,7 +14,7 @@ end
 
 
 def create
-  item = Item.create(picture: params[:picture], name: params[:name], initial_price: params[:initial_price], condition: params[:condition], sold: params[:sold], city: params[:city], user_id: params[:user_id], charity_id: params[:charity_id])
+  item = Item.create(image: params[:image], name: params[:name], price: params[:price], condition: params[:condition], sold: params[:sold], city: params[:city], user_id: params[:user_id], charity_id: params[:charity_id])
   render json: item, except: [:created_at, :updated_at]
 end 
 

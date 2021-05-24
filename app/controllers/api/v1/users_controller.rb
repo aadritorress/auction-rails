@@ -10,6 +10,10 @@ def show
   render json: user, except: [:created_at, :updated_at]
 end 
 
+def profile
+render json: { user: UserSerializer.new(logged_in?) }
+end 
+
 def create
   # byebug
     @user = User.create(user_params)

@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(version: 2021_05_21_155842) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "picture"
+    t.string "image"
     t.string "name"
-    t.string "initial_price"
+    t.string "price"
     t.string "condition"
     t.boolean "sold"
     t.string "city"

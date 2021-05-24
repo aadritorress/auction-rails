@@ -1,9 +1,9 @@
 class CreateItems < ActiveRecord::Migration[6.1]
   def change
     create_table :items do |t|
-      t.string :picture
+      t.string :image
       t.string :name
-      t.string :initial_price
+      t.string :price
       t.string :condition
       t.boolean :sold
       t.string :city

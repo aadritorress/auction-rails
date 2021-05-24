@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       post '/login', to: 'auth#login'
       post '/login', to: 'auth#create'
       post '/login', to: 'auth#signup'
-      # get '/profile', to: 'users#profile'
+      get '/profile', to: 'users#profile'
     end
   end
 end 
