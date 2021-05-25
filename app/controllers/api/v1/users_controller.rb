@@ -10,6 +10,13 @@ def show
   render json: user, except: [:created_at, :updated_at]
 end 
 
+def update 
+  user = User.find(params[:id])
+  # user.update(user_params)
+  user.update(name: params[:user][:name], email: params[:user][:email], username: params[:user][:username], password: params[:user][:password])
+  render json: user
+end 
+
 def profile
 render json: { user: UserSerializer.new(logged_in?) }
 end 
@@ -23,6 +30,12 @@ def create
       render json: { error: 'failed to create user' }, status: :not_acceptable
   end
 end
+
+def destroy
+  user = User.find(params[:id])
+  user.destroy
+end 
+
 
   private
   def user_params
