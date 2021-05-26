@@ -23,10 +23,10 @@ i2 = Item.create(image:'https://images2.imgix.net/p4dbimg/p20290/images/fus%20gn
 i3 = Item.create(image:'https://cdn11.bigcommerce.com/s-8wy6p2/images/stencil/1000x1000/products/11196/110262/yamaha-yamaha-walnut-console-piano__84915.1611958300.jpg?c=2', name:"Piano", price:'$500', condition:'used', sold:false, city:'Austin', user_id: u1.id, charity_id: c1.id)
 i4 = Item.create(image:'https://images.squarespace-cdn.com/content/v1/5645f8b4e4b0e040aef9c75d/1455128360646-UK87XQBJYQDF2LNEX70O/ke17ZwdGBToddI8pDm48kPp2JYJ8Y7QLR7IMbYiUgsxZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwRmxrNnFT91PUkGTPzzGBxQTxoGNFaMJ-Sc5fnM9xVUp3N4A_-aIaiBFrBlb1bjUY/2%2Bvintage%2Btennis%2Brackets%2B9%2B1-4%2Bx%2B27+copy.png?format=2500w', name:"Vintage Tennis Rackets", price:'$40', condition:'used', sold:false, city:'Austin', user_id: u2.id, charity_id: c1.id)
 
-b1 = Bid.create(amount: '$160', item_id: i1.id)
-b2 = Bid.create(amount: '$100', item_id: i2.id)
-b3 = Bid.create(amount: '$520', item_id: i3.id)
-b4 = Bid.create(amount: '$50', item_id: i4.id)
+b1 = Bid.create(amount: '$160', item_id: i1.id, user_id: u2.id)
+b2 = Bid.create(amount: '$100', item_id: i2.id, user_id: u2.id)
+b3 = Bid.create(amount: '$520', item_id: i3.id, user_id: u1.id)
+b4 = Bid.create(amount: '$50', item_id: i4.id, user_id: u1.id)
 
 p1 = Purchase.create(item_id: i1.id, bid_id: b1.id)
 p2 = Purchase.create(item_id: i2.id, bid_id: b2.id)

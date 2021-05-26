@@ -13,7 +13,7 @@ end
 def update 
   user = User.find(params[:id])
   # user.update(user_params)
-  user.update(name: params[:user][:name], email: params[:user][:email], username: params[:user][:username], password: params[:user][:password])
+  user.update(user_params)
   render json: user
 end 
 
