@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_05_21_155842) do
     t.string "name"
     t.string "address"
     t.string "bio"
+    t.integer "donations"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -34,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_05_21_155842) do
   create_table "items", force: :cascade do |t|
     t.string "image"
     t.string "name"
-    t.string "price"
+    t.integer "price"
     t.string "condition"
     t.boolean "sold"
     t.string "city"

@@ -4,6 +4,7 @@ class CreateCharities < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :address
       t.string :bio
+      t.integer :donations
 
       t.timestamps
     end
