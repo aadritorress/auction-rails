@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_05_21_155842) do
     t.integer "price"
     t.string "condition"
     t.boolean "sold"
+    t.boolean "service"
     t.string "city"
     t.integer "user_id"
     t.integer "charity_id"

@@ -6,6 +6,7 @@ class CreateItems < ActiveRecord::Migration[6.1]
       t.integer :price
       t.string :condition
       t.boolean :sold
+      t.boolean :service
       t.string :city
       t.integer :user_id
       t.integer :charity_id

@@ -6,12 +6,12 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :items
+      resources :items 
       resources :users
       resources :bids
       resources :charities
       resources :purchases
-      # , only: [:create]
+      
       post '/login', to: 'auth#login'
       post '/login', to: 'auth#create'
       post '/login', to: 'auth#signup'
