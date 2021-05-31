@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_05_21_155842) do
   end
 
   create_table "charities", force: :cascade do |t|
+    t.string "image"
     t.string "name"
     t.string "address"
     t.string "bio"
