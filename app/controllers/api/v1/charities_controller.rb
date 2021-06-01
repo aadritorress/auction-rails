@@ -11,8 +11,9 @@ def show
 end 
 
 def update 
+  # byebug
   charity = Charity.find(params[:id])
-  charity.update(donations: params[:charity][:donations])
+  charity.update(donations: params[:donations])
   render json: charity
 end
 

@@ -19,8 +19,16 @@ end
 
 def update 
   item = Item.find(params[:id])
-  item.update(sold: params[:item][:sold])
-  render json: item
+  if item.update(sold: params[:item][:sold])
+    if item.bids.length > 0 
+  donation = item.bids.order("amount DESC").first.amount.to_i
+  item.charity.update(donations: item.charity.donations + donation)
+    else 
+      donation = item.price.to_i
+      item.charity.update(donations: item.charity.donations + donation)
+  end
+end
+  render json: {item: item, charity: item.charity}
 end
 
 
