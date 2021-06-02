@@ -21,7 +21,7 @@ c3 = Charity.create(image: 'https://www.gannett-cdn.com/presto/2019/05/21/PPHX/b
 u1 = User.create(name:'Adri Torres', email:'adri@msn.com', username:'adri', password:'cats')
 u2 = User.create(name:'Libby Torres', email:'libby@msn.com', username:'libby', password:'kittens')
 
-i5 = Item.create(image:'https://1mte442b7ch33eneyf3vycuu-wpengine.netdna-ssl.com/wp-content/uploads/2019/03/Louisville-Brewery-Tour-transportation.jpg', name:"Local Brewery Tour", price:45, condition:'new', sold:true, city:'Austin', user_id: u2.id, charity_id: c1.id)
+i5 = Item.create(image:'https://1mte442b7ch33eneyf3vycuu-wpengine.netdna-ssl.com/wp-content/uploads/2019/03/Louisville-Brewery-Tour-transportation.jpg', name:"Local Brewery Tour", price:45, condition:'new', sold:false, city:'Austin', user_id: u2.id, charity_id: c1.id)
 i6 = Item.create(image:'https://www.qgiv.com/blog/wp-content/uploads/2019/05/Auction-Item-Ideas-32.jpg', name:"Dedicated Tree", price:50, condition:'new', sold:false, city:'Austin', user_id: u2.id, charity_id: c1.id)
 i7 = Item.create(image:'https://www.qgiv.com/blog/wp-content/uploads/2019/05/Auction-Item-Ideas-18.jpg', name:"Photography Class", price:65, condition:'new', sold:false, city:'Austin', user_id: u2.id, charity_id: c1.id)
 i8 = Item.create(image:'https://www.qgiv.com/blog/wp-content/uploads/2019/05/Auction-Item-Ideas-41.jpg', name:"Personal Trainer", price:40, condition:'new', sold:false, city:'Austin', user_id: u2.id, charity_id: c1.id)
