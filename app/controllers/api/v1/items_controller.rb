@@ -25,7 +25,7 @@ def update
   item.charity.update(donations: item.charity.donations + donation)
   end
 end
-  render json: {item: item, charity: item.charity}
+  render json: {item: ItemSerializer.new(item), charity: item.charity}
 end
 
 
